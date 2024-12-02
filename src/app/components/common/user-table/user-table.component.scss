@@ -1,0 +1,57 @@
+@import "../../../assets/style/variables.scss";
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #1076eb1c;
+    border-radius: 10px;
+    overflow: hidden;
+  
+    thead {
+      background-color: #1076eb;
+  
+      th {
+        padding: 15px 20px;
+        color: white;
+        font-weight: bold;
+        text-align: left;
+      }
+    }
+  
+    tbody {
+      tr {
+        background-color: #fff;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: #e1f1ff;
+        }
+      }
+  
+      td {
+        padding: 15px 20px;
+        text-align: left;
+        border-bottom: 1px solid #e0e0e0;
+  
+        &.action {
+          display: flex;
+        }
+  
+        button {
+          margin: 0 5px;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      font-size: 14px;
+  
+      th,
+      td {
+        padding: 8px;
+      }
+    }
+  }

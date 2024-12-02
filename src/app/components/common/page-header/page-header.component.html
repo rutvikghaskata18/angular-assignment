@@ -1,0 +1,18 @@
+<header>
+  <div class="container">
+    <a href="/">
+      <img
+        src="https://img.freepik.com/free-vector/business-user-cog_78370-7040.jpg"
+        alt="User Profile Management"
+        loading="eager"
+        height="50px"
+        width="50px"
+        title="logo"
+      />
+    </a>
+    <h2>{{title}}</h2>
+    <div>
+      <button *ngIf="isProfilePage" (click)="navigateToAdd()">Add Profile</button>
+    </div>
+  </div>
+</header>

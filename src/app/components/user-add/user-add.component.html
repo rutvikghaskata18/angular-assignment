@@ -1,0 +1,56 @@
+<section class="add-user">
+  <app-page-header title="Add User"></app-page-header>
+  <div class="container form-container">
+    <form [formGroup]="userForm" (ngSubmit)="save()">
+      <label>Name:</label>
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Enter Name"
+        class="form-control"
+      />
+      <div *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="error">
+        <div *ngIf="name?.errors?.['required']">Name is required.</div>
+        <div *ngIf="name?.errors?.['minlength']">Name must be at least 4 characters long.</div>
+        <div *ngIf="name?.errors?.['forbiddenName']">Name cannot be Bob.</div>
+      </div>
+
+      <label>Email:</label>
+      <input
+        type="email"
+        formControlName="email"
+        placeholder="Enter Email"
+        class="form-control"
+      />
+      <div *ngIf="email?.invalid && (email?.dirty || email?.touched)" class="error">
+        <div *ngIf="email?.errors?.['required']">Email is required.</div>
+        <div *ngIf="email?.errors?.['email']">Please enter a valid email.</div>
+      </div>
+
+      <label>Phone:</label>
+      <input
+        type="tel"
+        formControlName="phone"
+        placeholder="Enter Phone"
+        class="form-control"
+      />
+      <div *ngIf="phone?.invalid && (phone?.dirty || phone?.touched)" class="error">
+        <div *ngIf="phone?.errors?.['required']">Phone number is required.</div>
+        <div *ngIf="phone?.errors?.['pattern']">Please enter a valid 10-digit phone number.</div>
+      </div>
+
+      <label>Address:</label>
+      <textarea
+        formControlName="address"
+        placeholder="Enter Address"
+        class="form-control"
+      ></textarea>
+      <div *ngIf="address?.invalid && (address?.dirty || address?.touched)" class="error">
+        <div *ngIf="address?.errors?.['required']">Address is required.</div>
+        <div *ngIf="address?.errors?.['minlength']">Address must be at least 10 characters long.</div>
+      </div>
+
+      <button type="submit" [disabled]="userForm.invalid">Save</button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<section class="user-profile">
+  <app-page-header
+    title="User Profiles"
+    [isProfilePage]="true"
+  ></app-page-header>
+  <div class="container">
+    <app-user-table
+      [data]="users"
+      (edit)="navigateToEdit($event)"
+      (view)="navigateToDetails($event)"
+      (delete)="deleteUser($event)"
+    >
+    </app-user-table>
+  </div>
+</section>

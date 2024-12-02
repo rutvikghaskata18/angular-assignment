@@ -1,0 +1,57 @@
+@import "../../assets/style/variables.scss";
+
+.add-user {
+  width: 100%;
+  .form-container {
+    max-width: 600px;
+    margin: 20px auto 0;
+    padding: 30px;
+    background-color: $white;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px $primary-20;
+    border: 1px solid $primary-20;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        color: #555;
+        margin-top: 20px;
+      }
+      input,
+      textarea {
+        margin-top: 5px;
+        padding: 12px 15px;
+        border: 1px solid $primary-30;
+        border-radius: 7px;
+        font-size: 16px;
+        font-family: inherit;
+        transition: border-color 0.3s ease;
+        &:focus {
+          outline: none;
+          border-color: $primary; // Highlight border on focus
+          box-shadow: 0 0 5px $primary-30;
+        }
+      }
+
+      textarea {
+        resize: vertical; // Allow vertical resizing only
+        min-height: 100px;
+      }
+
+      .error {
+        color: red;
+        font-size: 0.85em;
+        padding: 5px 0 10px 2px;
+      }
+
+      button {
+        margin-top: 20px;
+      }
+    }
+  }
+}

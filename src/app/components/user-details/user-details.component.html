@@ -1,0 +1,29 @@
+<section class="user-details">
+  <app-page-header title="User Details"></app-page-header>
+  <div *ngIf="user; else noUser" class="details-card">
+    <h2>User Details</h2>
+    <div class="detail-item">
+      <strong>ID:</strong> <span>{{ user.id }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Name:</strong> <span>{{ user.name }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Email:</strong> <span>{{ user.email }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Phone:</strong> <span>{{ user.phone }}</span>
+    </div>
+    <div class="detail-item">
+      <strong>Address:</strong> <span>{{ user.address }}</span>
+    </div>
+    <a href="/" class="back-btn">Back to Users</a>
+  </div>
+
+  <ng-template #noUser>
+    <div class="container details-card no-data">
+      <p>No user found. Please check the URL or go back to the user list.</p>
+      <a href="/" class="back-btn">Back to Users</a>
+    </div>
+  </ng-template>
+</section>

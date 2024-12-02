@@ -1,0 +1,41 @@
+@import "./app/assets/style/variables.scss";
+
+body {
+  font-family: "Poppins";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  padding-inline: 40px;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: $primary;
+  color: $white;
+  transition: background-color, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $primary-dark;
+    box-shadow: 0 0 10px 5px $primary-20;
+  }
+  &:active {
+    background-color: #003f7f; // Even darker shade on active
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

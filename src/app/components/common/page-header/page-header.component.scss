@@ -1,0 +1,25 @@
+@import "../../../assets/style/variables.scss";
+
+header {
+  width: 100%;
+  background-color: $header-white;
+  padding: 20px 30px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 60px;
+    a {
+      height: 50px;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+    h2 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

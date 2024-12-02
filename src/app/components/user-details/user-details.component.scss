@@ -1,0 +1,53 @@
+@import "../../assets/style/variables.scss";
+
+.user-details {
+  .details-card {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid $primary-30;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px $primary-20;
+    background-color: #fff;
+
+    &.no-data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: $primary;
+    }
+
+    .detail-item {
+      margin-bottom: 15px;
+      font-size: 16px;
+
+      strong {
+        font-weight: 600;
+        margin-right: 10px;
+      }
+    }
+  }
+  .back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #1076eb;
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #005bb5;
+    }
+  }
+  p {
+    text-align: center;
+    color: #999;
+  }
+}
